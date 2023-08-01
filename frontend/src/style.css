@@ -1,0 +1,198 @@
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.min.css");
+
+html {
+  background-color: rgba(27, 38, 54, 1);
+  text-align: center;
+  color: white;
+}
+
+body {
+  margin: 0;
+  color: white;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+  height: 100vh;
+  text-align: center;
+  
+}
+.main_screen_bg_logo{
+  font-size: 10vw;
+  position: fixed;
+  display: flow;
+  color: white;
+  text-shadow: 3px 3px 5px black;
+  text-align: center;
+  top: 30%;
+  z-index: -100;
+  user-select: none;
+}
+/* body{
+    margin:0;
+  
+  } */
+.container {
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+ 
+.menu {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  background: #1c1b1b;
+  color: black;
+  z-index: 1;
+  border-radius: 10px;
+  border: 1px solid white;
+}
+
+.menu ul {
+  padding-left: 0px;
+}
+
+.button {
+  padding: 3px;
+  margin: 3px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background: #333333;
+  text-align: center;
+  list-style: none;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background: rgb(3, 48, 103);
+
+}
+.button:active  {
+  background: rgba(0, 115, 255);
+}
+
+/* Estilos para la lista de archivos */
+.content {
+  text-align: start;
+  width: -webkit-fill-available;
+  /* margin-left: 20%; */
+}
+.schema_content ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+.schema_content li {
+  position: relative;
+  margin-bottom: 0.5em;
+  border-left: 2px solid white;
+  text-align: start;
+  cursor: pointer;
+}
+
+/* .schema_content .folder-icon::before {
+      content: '📁';
+      margin-right: 0.5em;
+    }
+
+    .schema_content .file-icon::before {
+      content: '📄';
+      margin-right: 0.5em;
+    } */
+.file {
+  display: none;
+}
+
+/* .schema_content ul ul {
+      display: none;
+    } */
+
+.schema_content .collapsible ul {
+  display: block;
+}
+
+.schema_content .collapsible::before {
+  color: orangered;
+  content: "v";
+  position: absolute;
+  left: -0.75em;
+}
+.schema_content .no_collapsible::before {
+  color: orangered;
+  content: "x";
+  position: absolute;
+  left: -0.75em;
+}
+
+.schema_content .collapsed ul {
+  display: none;
+}
+
+.schema_content .collapsed::before {
+  color: orangered;
+  content: ">";
+}
+
+.divisor {
+  border-bottom: 1px solid white;
+  margin: 3px 5px 3px 5px;
+}
+ .selected {
+  border: 1px solid rgba(255, 0, 0, 0.216);
+  background-color: rgba(234, 135, 135, 0.445);
+}
+
+
+
+.hidden{
+  display:none;
+}
+/* el abrir carpetas se hace aqui */
+.fa-folder:has(> span + ul)  {
+  display: none;
+}
+.fa-folder-open + ul {
+  display: block;
+}
+
+.folder  {
+  margin: 0px !important;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+.folder ul {
+  padding-top: 5px;
+}
+.folder:hover  {
+  /* background: rgba(141, 192, 255, 0.242); */
+  background: rgba(0, 213, 255, 0.167);
+}
+.folder i {
+  margin-right: 0.5em;  
+    margin-left: 1em;
+}
+
+
+.folder_actions{
+  display: none;
+}
+.selected > .folder_actions{
+  float: right;
+  display: block;
+}
